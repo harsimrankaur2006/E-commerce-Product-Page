@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Small Shop</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .item {
+            border: 1px solid black;
+            width: 160px;
+            padding: 8px;
+            margin: 6px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        select {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>My Simple Shop</h2>
+
+Sort:
+<select id="sortBox" onchange="update()">
+    <option value="">None</option>
+    <option value="low">Price Low</option>
+    <option value="high">Price High</option>
+    <option value="name">Name</option>
+</select>
+
+Filter:
+<select id="catBox" onchange="update()">
+    <option value="all">All</option>
+    <option value="phone">Phone</option>
+    <option value="laptop">Laptop</option>
+    <option value="watch">Watch</option>
+    <option value="other">Other</option>
+</select>
+
+<hr>
+
+<div id="list"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
